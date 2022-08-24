@@ -1,0 +1,78 @@
+@use "./../utils" as *;
+@use "./../components" as *;
+
+// 헤더
+.header {
+  background: $dark-bg-color;
+  color: $dark-text-color;
+  padding: 0 rem(24px);
+
+  @include desktop {
+    padding: 0 rem(40px);
+  }
+
+  &__inner {
+    @include flexbox($a: center);
+    padding: rem(16px) 0;
+    @include desktop {
+      @include boxSizeMax(1200px);
+    }
+  }
+}
+
+// 로고
+.brand {
+  margin-right: auto;
+
+  .logo {
+    display: block;
+  }
+}
+
+// 햄버거 버튼
+.buttonWrapper {
+  @include mobile {
+    transform: translatex(8px);
+  }
+  @include desktop {
+    display: none;
+  }
+
+  button:focus {
+    outline-offset: rem(4px);
+  }
+}
+
+// 내비게이션(메인 메뉴)
+.menu {
+  @include mobile {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    background: $dark-bg-color;
+    padding: rem(32px) rem(24px);
+  }
+
+  @include desktop {
+    transform: translateX(rem(24px));
+    font-weight: 500;
+    @include flexbox($a: center);
+  }
+
+  &__item {
+    padding: rem(8px);
+  }
+
+  &__link {
+    display: block;
+    padding: rem(16px);
+  }
+}
+
+// .main {
+//   width: 1200px;
+//   margin: 0 auto;
+// }

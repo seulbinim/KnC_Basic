@@ -1,0 +1,14 @@
+@mixin flexbox($d: row, $j: flex-start, $a: stretch, $w: nowrap) {
+  display: flex;
+  flex-direction: $d;
+  justify-content: $j;
+  align-items: $a;
+  flex-wrap: $w;
+}
+@mixin flexCenter($d: row, $w: nowrap) {
+  display: flex;
+  flex-direction: $d;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: $w;
+}
